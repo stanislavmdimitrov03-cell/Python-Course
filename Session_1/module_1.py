@@ -1,6 +1,5 @@
 from typing import List
 
-
 def task_1(array: List[int], target: int) -> List[int]:
     seen = {}
     for num in array:
@@ -18,16 +17,13 @@ def task_2(number: int) -> int:
         number //= 10
     return result
 
-
 def task_3(array: List[int]) -> int:
-    arr = array[:]
-    for i in range(len(arr)):
-        val = abs(arr[i]) - 1
-        if arr[val] < 0:
-            return abs(arr[i])
-        arr[val] = -arr[val]
+    for i in range(len(array)):
+        val = abs(array[i]) - 1
+        if array[val] < 0:
+            return abs(array[i])
+        array[val] = -array[val]
     return -1
-
 
 def task_4(string: str) -> int:
     roman = {'I': 1, 'V': 5, 'X': 10, 'L': 50,
@@ -39,7 +35,6 @@ def task_4(string: str) -> int:
         else:
             result += roman[string[i]]
     return result
-
 
 def task_5(array: List[int]) -> int:
     smallest = array[0]
