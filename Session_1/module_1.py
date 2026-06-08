@@ -9,6 +9,7 @@ def task_1(array: List[int], target: int) -> List[int]:
             return [complement, num]
         seen[num] = True
     return []
+    
 
 def task_2(number: int) -> int:
     result = 0
